@@ -6,10 +6,7 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
     }
 
     actions = [
-      "s3:ListBucket",
-      "s3:GetObject",
-      "s3:PutObject",
-      "s3:DeleteObject"
+      "s3:*",
     ]
 
     resources = [
@@ -22,5 +19,9 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
 resource "aws_s3_bucket_policy" "my_bucket_policy" {
   bucket = aws_s3_bucket.my-bucket1231zz.id
   policy = data.aws_iam_policy_document.s3_bucket_policy.json
+}
+
+resource "aws_s3_bucket" "log_bucket" {
+  bucket = "rennard-logging-bucket1"
 }
 
