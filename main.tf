@@ -54,6 +54,7 @@ resource "aws_route_table_association" "route_table_assoc" {
 
 resource "aws_s3_bucket" "my-bucket1231zz" {
   bucket = "my-bucket1231zz"
+  force_destroy = true
 }
 
 #create security group
@@ -131,8 +132,3 @@ EOT
     Name = "Web-Server"
   }
 }
-
-
-
-
-
