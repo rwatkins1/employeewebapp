@@ -121,8 +121,8 @@ unzip FlaskApp.zip
 cd FlaskApp/
 yum -y install python3-pip
 pip install -r requirements.txt
-export PHOTOS_BUCKET=${var.bucket_name}
-export AWS_DEFAULT_REGION=us-east-1a
+export PHOTOS_BUCKET=my-bucket1231zz
+export AWS_DEFAULT_REGION=us-east-1
 export DYNAMO_MODE=on
 FLASK_APP=application.py /usr/local/bin/flask run --host=0.0.0.0 --port=80 
 EOT  
@@ -132,9 +132,9 @@ EOT
   }
 }
 
-data "aws_iam_role" "instance_policy" {
-  name = "S3DB1"
-}
+# data "aws_iam_role" "instance_policy" {
+#   name = "S3DB1"
+# }
 
 
 
