@@ -132,9 +132,7 @@ EOT
   }
 }
 
-# data "aws_iam_role" "instance_policy" {
-#   name = "S3DB1"
-# }
+
 
 
 
