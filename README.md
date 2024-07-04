@@ -1,5 +1,7 @@
 # employeewebapp
 
+![Employee Web App](https://github.com/rwatkins1/employeewebapp/assets/65431767/483e5392-bd1d-494b-9135-298b709f11a4)
+
 ## Overview
 In this project, I took an existing project that can be found on AWS's Skill Builder and recreated it using infrastructure as code. This project aims to demonstrate how to automate the deployment of AWS infrastructure using IaC tools.
 
