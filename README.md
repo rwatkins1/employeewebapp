@@ -44,13 +44,11 @@ To deploy this infrastructure, follow these steps:
 - [Challenges and solutions]
 
 ## Known Issues
-- [Issues and limitations]
+- I did not design for high availability at the application layer to save no cost. If I were to add these components, I would add an application load balancer, auto scaling, launch a second ec2 instance in another AZ. 
 
 ## Future Improvements
-- [Suggestions for future improvements]
+I could improve this architeture by containerizing the application, making the application more lightweight. 
 
-## License
-- [License information]
 
 
 
