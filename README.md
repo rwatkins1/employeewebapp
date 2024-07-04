@@ -19,8 +19,7 @@ In this project, I took an existing project that can be found on AWS's Skill Bui
 - Create Security Group
 
 ### Step 2: Create IAM Policies and Roles
-- IAM role
-- Specify polic
+- Create IAM Role that will grant EC2 permissions to access S3 and DynamoDB
 
 ### Step 3: Create EC2 Instances
 - Launch in the correct VPC, subnet & AZ
