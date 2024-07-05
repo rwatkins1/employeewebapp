@@ -9,7 +9,7 @@ variable "bucket_name" {
 }
 
 variable "ami" {
-  default = "08a0d1e16fc3f61ea"
+  default = "ami-06c68f701d8090592"
 }
 
 variable "instance_type"{
@@ -18,4 +18,14 @@ variable "instance_type"{
 
 variable "key_name" {
   default = "demo"
+}
+
+variable "aws_iam_role"{
+  default = "S3DBRole"
+}
+
+variable "aws_iam_instance_profile" {
+  default = "S3DBRole" 
+  description = "The name of the IAM instance profile to use for EC2 instances"
+  type        = string
 }
