@@ -53,7 +53,7 @@ resource "aws_route_table_association" "route_table_assoc" {
 #create a s3 bucket
 
 resource "aws_s3_bucket" "my-bucket1231zz" {
-  bucket = "my-bucket1231zz"
+  bucket = var.bucket_name
   force_destroy = true
 }
 
