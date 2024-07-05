@@ -103,8 +103,8 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 #create ec2 instance
 
 resource "aws_instance" "amazonlinux" {
-  ami           = "ami-08a0d1e16fc3f61ea"
-  instance_type = "t2.micro"
+  ami           = var.ami
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.TF_SG.id]
   associate_public_ip_address = true
   subnet_id  = aws_subnet.subnet1.id
