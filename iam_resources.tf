@@ -1,5 +1,5 @@
-resource "aws_iam_role" "S3DB1" {
-  name               = "S3DB1"
+resource "aws_iam_role" "instance-profile" {
+  name               = var.aws_iam_role
   assume_role_policy = data.aws_iam_policy_document.instance_assume_role_policy.json
 }
 
@@ -13,9 +13,9 @@ data "aws_iam_policy_document" "instance_assume_role_policy" {
   }
 }
 
-resource "aws_iam_instance_profile" "S3DB1" {
-  name = "S3DB1"
-  role = aws_iam_role.S3DB1.name
+resource "aws_iam_instance_profile" "instance-profile" {
+  name = var.aws_iam_role
+  role = aws_iam_role.instance-profile.name
 }
 
 # Attach the AmazonDynamoDBFullAccess policy
