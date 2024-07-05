@@ -108,8 +108,8 @@ resource "aws_instance" "amazonlinux" {
   vpc_security_group_ids = [aws_security_group.TF_SG.id]
   associate_public_ip_address = true
   subnet_id  = aws_subnet.subnet1.id
-  key_name = "demo"
-  iam_instance_profile = aws_iam_instance_profile.S3DB1.name
+  key_name = var.key_name
+  iam_instance_profile = var.aws_iam_instance_profile
 
   depends_on = [
     aws_security_group.TF_SG
